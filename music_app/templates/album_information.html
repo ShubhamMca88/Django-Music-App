@@ -1,4 +1,4 @@
-{% extends 'music_nation/base.html' %}
+{% extends 'base.html' %}
 
 {%block title%}
 {%endblock%}
@@ -6,8 +6,8 @@
   <ul class="album-list">
     <h2>{{ album.album_name }}</h2>
     {% if album.album_artist == user %}
-    <a href="{% url 'music_nation:delete_album' username album %}">Delete</a>/
-    <a href="{% url 'music_nation:add_song' username album %}">Add new song</a>
+    <a href="{% url 'music_app:delete_album' username album %}">Delete</a>/
+    <a href="{% url 'music_app:add_song' username album %}">Add new song</a>
     {% endif %}
 
 

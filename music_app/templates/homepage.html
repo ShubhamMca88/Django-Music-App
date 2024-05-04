@@ -1,4 +1,4 @@
-{% extends 'music_nation/base.html' %}
+{% extends 'base.html' %}
 
 {%block title%}
 {%endblock%}
@@ -8,11 +8,11 @@
   <ul class="home-list">
     {% for album in albums %}
       <li >
-        <span><a class="home-a" href="{% url 'music_nation:album_detail' username=album.album_artist album=album.album_name %}">
+        <span><a class="home-a" href="{% url 'album_detail' username=album.album_artist album=album.album_name %}">
           <img src="{{ album.album_logo.url }}" style="width:100px">
         </a></span>
          <span style="color:#007bff;">{{album.album_name}} by</span>
-        <a class="home-a" href="{% url 'music_nation:profile_detail' username=album.album_artist %}">
+        <a class="home-a" href="{% url 'profile_detail' username=album.album_artist %}">
           {{album.album_artist}}
         </a>
       </li><hr/>

@@ -1,15 +1,10 @@
-from django.shortcuts import (
-    render,
-    get_object_or_404,
-    redirect
-    )
+from django.shortcuts import ( render, get_object_or_404, redirect )
 from django.utils import timezone
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
 from django import forms
-
 from .forms import SignUpForm
 from .models import Album, Song
 from .forms import NewAlbum, NewSong
@@ -19,7 +14,7 @@ from .forms import NewAlbum, NewSong
 def home(request):
     #show all albums in chronological order of it's upload
     albums = Album.objects.all()
-    return render(request, 'music_streaming/homepage.html',{'albums':albums})
+    return render(request, 'homepage.html',{'albums':albums})
 
 #........................................................#
 
@@ -27,7 +22,7 @@ def profile_detail(request, username):
     # show all albums of the artist
     albums = get_object_or_404(User, username=username)
     albums = albums.albums.all()
-    return render(request, 'music_streaming/artist_information.html', {'albums':albums, 'username':username})
+    return render(request, 'artist_information.html', {'albums':albums, 'username':username})
 
 #........................................................#
 
@@ -47,12 +42,12 @@ def add_album(request, username):
                     uploaded_on = timezone.now(),
                     album_artist = request.user
                 )
-                return redirect('music_streaming:profile_detail', username=request.user)
+                return redirect('music_app:profile_detail', username=request.user)
         else:
             form = NewAlbum()
-        return render(request, 'music_streaming/create_new_album.html', {'form':form})
+        return render(request, 'create_new_album.html', {'form':form})
     else:
-        return redirect('music_streaming:profile_detail', username=user)
+        return redirect('music_app:profile_detail', username=user)
 
 #........................................................#
 
@@ -62,7 +57,7 @@ def album_detail(request,username, album):
     songs = get_object_or_404(User, username=username)
     songs = songs.albums.get(album_name=str(album))
     songs = songs.songs.all()
-    return render(request, 'music_streaming/album_information.html', {'songs':songs, 'album':album, 'username':username
+    return render(request, 'album_information.html', {'songs':songs, 'album':album, 'username':username
     })
 
 #........................................................#
@@ -75,13 +70,13 @@ def signup(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('music_streaming:home')
+            return redirect('music_app:home')
         else:
             message = 'Looks like a username with that email or password already exists'
-            return render(request, 'music_streaming/user_signup.html', {'form':form,'message':message})
+            return render(request, 'user_signup.html', {'form':form,'message':message})
     else:
         form = SignUpForm()
-        return render(request, 'music_streaming/user_signup.html', {'form':form})
+        return render(request, 'user_signup.html', {'form':form})
 
 #........................................................#
 
@@ -96,9 +91,9 @@ def delete_album(request, username, album):
             song.delete_media()#deletes the song_file
         album_to_delete.delete_media()#deletes the album_logo
         album_to_delete.delete()#deletes the album from database
-        return redirect('music_streaming:profile_detail', username=username)
+        return redirect('music_app:profile_detail', username=username)
     else:
-        return redirect('music_streaming:profile_detail', username=username)
+        return redirect('music_app:profile_detail', username=username)
 
 #........................................................#
 
@@ -120,10 +115,10 @@ def add_song(request, username, album):
                     song_file = form.cleaned_data.get('song_file'),
                     song_album = album_get
                 )
-                return redirect('music_streaming:album_detail', username=username, album=album)
+                return redirect('music_app:album_detail', username=username, album=album)
 
         else:
             form = NewSong()
-            return render(request, 'music_streaming/create_new_song.html', {'form':form})
+            return render(request, 'create_new_song.html', {'form':form})
     else:
-        return redirect('music_streaming:album_detail', username=username, album=album)
+        return redirect('music_app:album_detail', username=username, album=album)

@@ -1,11 +1,11 @@
-{% extends 'music_nation/base.html' %}
+{% extends 'base.html' %}
 
 {% block title %}SignUp{% endblock %}
 
 {% block content %}
 {% if user.is_authenticated %}
 <h3><strong>You will have to logout and sign in as a new user</strong></h3>
-<small>Do you want to <a href="{% url 'music_nation:logout' %}"><strong>LogOut</strong></a></small>
+<small>Do you want to <a href="{% url 'music_app:logout' %}"><strong>LogOut</strong></a></small>
 
 {% else %}
       {% if message %}
