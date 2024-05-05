@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{% static 'music_app/css/bootstrap.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'music_app/css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&family=Noto+Music&display=swap" rel="stylesheet">
   </head>
-  <body style="background-color:skyblue">
+  <body>
     <div >
       <header>
         <nav>
-          <ul class="bglight" style="background-color:darkblue">
+          <ul class="bglight" style="background-color:rgb(9, 193, 206)">
             <li class="li-left">
-              <a class="base-a-img" href="{% url 'home' %}">
-                <img src="{%static 'music_app/img/music-streaming.png' %}" style="width:50px;" alt="logo">
-              </a>
+              <a class="base-a-img" href="{% url 'home' %}"></a>
             </li>
              <li class="li-left" style="color:white">
               <h2 class="base-a">Music Streaming Application</h2>
