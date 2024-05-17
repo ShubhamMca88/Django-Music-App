@@ -5,7 +5,7 @@
         </samp>
 </h1>
 <p align="center">
-        <samp> Hi, I'm a Full stack python web developer from Meerut , India. Python Programing and proficient knowledge of Django Web development , I am constantly expanding my expertise in web development. With a diverse skill set, I aim to contribute innovatively to every project.
+        <samp> Hy I'm shubham, as developer with a passion for crafting clean and efficient code. Proficient in frontend and backend technologies, with a focus on creating intuitive user experiences and scalable solutions. Dedicated to continuous learning and staying updated with the latest industry trends. Ready to contribute to dynamic teams and drive impactful projects.
         </samp>
 </p>
 
@@ -18,26 +18,18 @@
     </a>
  <a href="https://www.instagram.com/su.g.am?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
   <img src="https://img.shields.io/badge/Instagram-fe4164?style=for-the-badge&logo=instagram&logoColor=white"/>
-    </a> 
-  <!--<a href="#" target="blank">
-  <img src="https://img.shields.io/badge/Website-DC?style=for-the-badge&logo=medium&logoColor=white"/>
- </a>
-</p>
-<br />
+    </a>
+ <a href="mailto:shubhamkumar.mca@outlook.com" target="_blank">
+  <img src="https://img.shields.io/badge/gmail-61D?style=for-the-badge&logo=gmail&logoColor=white"/>
+    </a>
 
-<!-- About Section -->
- # Connect me
- 
-<p>
+## Simple Music Streaming
 
- ✌️ &emsp; Enjoy to do programming and love to see the output <br/><br/>
- ❤️ &emsp; Love to writing code and learning new features<br/><br/>
- 📧 &emsp; Reach me anytime: shubhamkumar.mca88@gmail.com<br/><br/>
-</p>
+This repository contains the code for music play streeming .
 
-## Use To Code
+## Use To Technology
 
-![Nodejs](https://img.shields.io/badge/Python-3C873A?style=for-the-badge&labelColor&logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3C873A?style=for-the-badge&labelColor&logo=python&logoColor=white)
 ![Django](https://img.shields.io/badge/-Django-61D?style=for-the-badge&labelColor&logo=django&logoColor=)
 ![Javascript](https://img.shields.io/badge/Javascript-B51B75?style=for-the-badge&labelColor&logo=javascript&logoColor=white)
 ![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
@@ -48,17 +40,8 @@
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![Github](https://img.shields.io/badge/Github-9195F6?style=for-the-badge&logo=github&logoColor=white)
 
-## Some Code Repo...
-
-[![Shubham](https://github-readme-stats.vercel.app/api/pin/?username=shubhamMca88&repo=Shubham&border_color=7F3&bg_color=0D1117&title_color=C9D1D9&text_color=8B9E&icon_color=7F3FB)](https://github.com/ShubhamMca88/Shubham.git)
-
-<p align="left">
-  <a href="https://github.com/chiragjain307?tab=repositories" target="_blank"><img alt="All Repositories" title="All Repositories" src="https://img.shields.io/badge/-All%20Repos-2962FF?style=for-the-badge&logo=koding&logoColor=white"/></a>
-</p>
-
 <h3 align="left">Support </h3>
 <p><a href="https://buymeacoffee.com/shubhammca88"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="shubham" /></a></p><br><br>
 
 <br/>
-<hr/>
-<br/>
+
